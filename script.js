@@ -388,8 +388,60 @@ document.addEventListener(
     setupProductAnimations();
 
     setupContactAnimation();
+
+    setupAddressAnimation();
      
     setupOrders();
 
   }
 );
+
+/* ==================================================
+   ADDRESS SCROLL REVEAL
+================================================== */
+
+function setupAddressAnimation() {
+
+  const address =
+    document.querySelector(".address");
+
+  if (!address) {
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+
+    address.classList.add(
+      "address-visible"
+    );
+
+    return;
+  }
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            address.classList.add(
+              "address-visible"
+            );
+
+            observer.unobserve(
+              address
+            );
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.2
+      }
+    );
+
+  observer.observe(address);
+}
