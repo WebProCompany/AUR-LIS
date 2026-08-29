@@ -1,3 +1,4 @@
+```css
 /* ==================================================
    AURÉLIS
    PREMIUM PERFUME WEBSITE
@@ -166,17 +167,17 @@ a {
 
 
 /* ==================================================
-   HERO IMAGE
+   HERO IMAGE — LARGE
 ================================================== */
 
 .hero-image {
   position: absolute;
 
-  left: 0%;
+  left: -3%;
   bottom: 0;
 
-  width: 100%;
-  max-width: 950px;
+  width: 78%;
+  max-width: 1150px;
 
   z-index: 20;
 
@@ -721,7 +722,9 @@ footer strong {
   }
 
   .hero-image {
-    width: 53%;
+    width: 65%;
+    max-width: 850px;
+    left: -3%;
   }
 
   .hero-content {
@@ -858,12 +861,12 @@ footer strong {
 
     bottom: auto;
 
-    width: 95%;
+    width: 110%;
 
-    max-width: 500px;
+    max-width: 600px;
 
     margin:
-      30px auto 0;
+      20px auto 0;
 
     order: 2;
 
@@ -986,7 +989,7 @@ footer strong {
   }
 
   .hero-image {
-    width: 100%;
+    width: 115%;
   }
 
   .product-name {
@@ -997,3 +1000,4 @@ footer strong {
     font-size: 12px;
   }
 }
+```
