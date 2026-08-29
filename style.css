@@ -175,8 +175,8 @@ a {
   left: 0%;
   bottom: 0;
 
-  width: 58%;
-  max-width: 1500px;
+  width: 100%;
+  max-width: 950px;
 
   z-index: 20;
 
