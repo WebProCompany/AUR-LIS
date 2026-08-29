@@ -2532,7 +2532,7 @@ h2 {
     height: 100%;
     max-width: none;
     object-fit: cover;
-    object-position: center 58%;
+    object-position: center 50%;
     transform: scale(1.18);
     filter: none;
   }
