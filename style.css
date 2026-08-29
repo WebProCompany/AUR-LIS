@@ -647,35 +647,43 @@ a {
 
 
 /* ==================================================
-   PRODUCT CARD
+   PRODUCT CARD — PREMIUM
 ================================================== */
 
 .product-card {
+  position: relative;
+
   overflow: hidden;
 
   background:
-    var(--white);
+    rgba(255, 255, 255, 0.92);
 
   border:
-    1px solid var(--border);
+    1px solid
+    rgba(49, 42, 49, 0.08);
 
-  border-radius: 18px;
+  border-radius: 22px;
 
   box-shadow:
-    0 8px 30px
-    rgba(50, 30, 50, 0.05);
+    0 12px 35px
+    rgba(50, 30, 50, 0.06);
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
 }
 
 .product-card:hover {
   transform:
-    translateY(-7px);
+    translateY(-10px);
 
   box-shadow:
-    var(--shadow);
+    0 25px 55px
+    rgba(50, 30, 50, 0.14);
+
+  border-color:
+    rgba(184, 117, 130, 0.22);
 }
 
 
@@ -684,6 +692,8 @@ a {
 ================================================== */
 
 .product-image {
+  position: relative;
+
   width: 100%;
 
   aspect-ratio:
@@ -692,7 +702,37 @@ a {
   overflow: hidden;
 
   background:
-    #f4edf4;
+    linear-gradient(
+      145deg,
+      #f8f0f6,
+      #f1e4ed
+    );
+}
+
+.product-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 65%,
+      rgba(30, 20, 30, 0.08)
+    );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+.product-card:hover .product-image::after {
+  opacity: 1;
 }
 
 .product-image img {
@@ -704,12 +744,12 @@ a {
   object-fit: cover;
 
   transition:
-    transform 0.5s ease;
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .product-card:hover .product-image img {
   transform:
-    scale(1.04);
+    scale(1.07);
 }
 
 
@@ -719,21 +759,31 @@ a {
 
 .product-info {
   padding:
-    17px;
+    20px 18px 18px;
 }
 
 .product-name {
   margin-bottom: 9px;
 
-  font-size: 16px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-  line-height: 1.35;
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  color:
+    var(--black);
 }
 
 .product-description {
   min-height: 62px;
 
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 
   color:
     var(--muted);
@@ -743,6 +793,11 @@ a {
   line-height: 1.55;
 }
 
+
+/* ==================================================
+   PRODUCT BOTTOM
+================================================== */
+
 .product-bottom {
   display: flex;
 
@@ -750,7 +805,7 @@ a {
 
   justify-content: space-between;
 
-  gap: 10px;
+  gap: 12px;
 }
 
 .product-price {
@@ -770,10 +825,16 @@ a {
 ================================================== */
 
 .order-btn {
+  position: relative;
+
+  overflow: hidden;
+
   border: none;
 
+  min-height: 40px;
+
   padding:
-    10px 15px;
+    0 17px;
 
   border-radius: 30px;
 
@@ -790,8 +851,39 @@ a {
   font-weight: 700;
 
   transition:
-    background 0.25s ease,
-    transform 0.25s ease;
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.order-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  transition:
+    left 0.6s ease;
+}
+
+.order-btn:hover::before {
+  left: 140%;
 }
 
 .order-btn:hover {
@@ -799,10 +891,58 @@ a {
     var(--rose);
 
   transform:
-    translateY(-2px);
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 22px
+    rgba(184, 117, 130, 0.25);
+}
+
+.order-btn:active {
+  transform:
+    translateY(-1px)
+    scale(0.97);
 }
 
 
+/* ==================================================
+   MOBILE PRODUCT CARD
+================================================== */
+
+@media (max-width: 700px) {
+
+  .product-card {
+    border-radius: 15px;
+  }
+
+  .product-info {
+    padding:
+      12px 10px 11px;
+  }
+
+  .product-name {
+    font-size: 13px;
+  }
+
+  .product-description {
+    font-size: 10px;
+    line-height: 1.4;
+    margin-bottom: 11px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .order-btn {
+    min-height: 34px;
+
+    padding:
+      0 12px;
+
+    font-size: 10px;
+  }
+}
 /* ==================================================
    CONTACTS
 ================================================== */
