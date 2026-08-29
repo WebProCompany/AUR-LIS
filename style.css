@@ -1356,6 +1356,91 @@ footer strong {
   }
 
   .product-price {
+
+   /* ==================================================
+   PRODUCT CARDS — SCROLL REVEAL
+================================================== */
+
+.product-card {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.product-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   STAGGER ANIMATION
+================================================== */
+
+.product-card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.product-card:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.product-card:nth-child(3) {
+  transition-delay: 0.19s;
+}
+
+.product-card:nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+.product-card:nth-child(5) {
+  transition-delay: 0.33s;
+}
+
+.product-card:nth-child(6) {
+  transition-delay: 0.40s;
+}
+
+.product-card:nth-child(7) {
+  transition-delay: 0.47s;
+}
+
+.product-card:nth-child(8) {
+  transition-delay: 0.54s;
+}
+
+.product-card:nth-child(9) {
+  transition-delay: 0.61s;
+}
+
+.product-card:nth-child(10) {
+  transition-delay: 0.68s;
+}
+
+.product-card:nth-child(11) {
+  transition-delay: 0.75s;
+}
+
+.product-card:nth-child(12) {
+  transition-delay: 0.82s;
+}
+
+
+/* ==================================================
+   ACCESSIBILITY
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
     font-size: 12px;
   }
 }
