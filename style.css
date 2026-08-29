@@ -172,11 +172,11 @@ a {
 .hero-image {
   position: absolute;
 
-  left: 2%;
+  left: 0%;
   bottom: 0;
 
-  width: 100%;
-  max-width: 760px;
+  width: 58%;
+  max-width: 900px;
 
   z-index: 20;
 
