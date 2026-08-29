@@ -376,6 +376,29 @@ function setupContactAnimation() {
 }
 
 /* ==================================================
+   FOOTER CONTACT TOGGLE
+================================================== */
+
+function setupFooterContact() {
+
+  const button =
+    document.querySelector("#footer-contact-toggle");
+
+  const social =
+    document.querySelector("#footer-social");
+
+  if (!button || !social) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+
+    social.classList.toggle("show");
+
+  });
+}
+
+/* ==================================================
    INITIALIZE
 ================================================== */
 
