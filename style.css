@@ -2345,21 +2345,24 @@ button {
   ================================================== */
 
   .hero-image {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 620px;
 
-    z-index: 1;
+  z-index: 1;
 
-    opacity: 1;
+  opacity: 1;
 
-    animation:
-      heroMobileImageReveal
-      1.2s ease forwards;
-  }
+  overflow: hidden;
+
+  animation:
+    heroMobileImageReveal
+    1.2s ease forwards;
+}
 
   .hero-image::after {
     content: "";
