@@ -386,6 +386,8 @@ document.addEventListener(
     renderProducts();
 
     setupProductAnimations();
+
+    setupContactAnimation();
      
     setupOrders();
 
