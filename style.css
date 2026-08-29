@@ -2390,7 +2390,7 @@ button {
 
   object-fit: cover;
 
-  object-position: center 95%;
+  object-position: center 45%;
 
   transform:
     scale(1.12);
