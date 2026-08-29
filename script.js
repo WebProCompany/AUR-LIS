@@ -413,6 +413,8 @@ document.addEventListener(
     setupContactAnimation();
 
     setupAddressAnimation();
+
+    setupFooterContact();
      
     setupOrders();
 
