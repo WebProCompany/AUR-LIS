@@ -336,6 +336,8 @@ document.addEventListener(
 
     renderProducts();
 
+    setupProductAnimations();
+     
     setupOrders();
 
   }
