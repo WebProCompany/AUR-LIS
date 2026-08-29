@@ -325,6 +325,55 @@ function setupOrders() {
   });
 }
 
+/* ==================================================
+   CONTACT SCROLL REVEAL
+================================================== */
+
+function setupContactAnimation() {
+
+  const contacts =
+    document.querySelector(".contacts");
+
+  if (!contacts) {
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+
+    contacts.classList.add(
+      "contact-visible"
+    );
+
+    return;
+  }
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            contacts.classList.add(
+              "contact-visible"
+            );
+
+            observer.unobserve(
+              contacts
+            );
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.2
+      }
+    );
+
+  observer.observe(contacts);
+}
 
 /* ==================================================
    INITIALIZE
