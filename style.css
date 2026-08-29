@@ -1356,6 +1356,10 @@ footer strong {
   }
 
   .product-price {
+    font-size: 12px;
+  }
+}
+
 
 /* ==================================================
    PRODUCT CARDS — SCROLL ANIMATION
@@ -1449,5 +1453,21 @@ footer strong {
   .product-card.show {
     transform:
       translateY(0);
+  }
+}
+
+
+/* ==================================================
+   ACCESSIBILITY
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .product-card {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
   }
 }
