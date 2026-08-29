@@ -11,14 +11,22 @@
 :root {
   --lilac: #e8d5e8;
   --lilac-dark: #c9a8c7;
+
   --rose: #b87582;
   --rose-light: #d9aeb6;
+
   --cream: #fffaf7;
   --white: #ffffff;
   --black: #171318;
+
   --text: #312a31;
   --muted: #766d76;
+
   --border: rgba(49, 42, 49, 0.12);
+
+  /* HERO BUTTON COLORS */
+  --women-button: #f2c4ce;
+  --men-button: #4f4654;
 
   --shadow:
     0 25px 70px rgba(44, 27, 44, 0.15);
@@ -174,7 +182,10 @@ a {
   display: block;
 
   visibility: visible;
-  opacity: 1;
+  opacity: 0;
+
+  animation:
+    heroImageReveal 1.4s ease forwards;
 }
 
 .hero-image img {
@@ -200,6 +211,23 @@ a {
 
 
 /* ==================================================
+   HERO IMAGE ANIMATION
+================================================== */
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.035);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ==================================================
    HERO CONTENT
 ================================================== */
 
@@ -215,34 +243,101 @@ a {
   padding-right: 4%;
 
   text-align: center;
+
+  opacity: 0;
+  transform: translateY(28px);
+
+  animation:
+    heroContentReveal 1s ease forwards;
+
+  animation-delay:
+    0.35s;
 }
+
+
+/* ==================================================
+   HERO CONTENT ANIMATION
+================================================== */
+
+@keyframes heroContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================================================
+   HERO LABEL
+================================================== */
 
 .hero-label {
   display: inline-block;
 
   margin-bottom: 18px;
 
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
 
   letter-spacing: 4px;
 
   color:
     rgba(23, 19, 24, 0.65);
+
+  opacity: 0;
+
+  animation:
+    heroElementReveal 0.8s ease forwards;
+
+  animation-delay:
+    0.55s;
 }
+
+
+/* ==================================================
+   HERO TITLE
+================================================== */
 
 .hero-content h1 {
   margin-bottom: 22px;
 
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size:
     clamp(55px, 8vw, 105px);
 
-  font-weight: 700;
+  font-weight: 600;
 
   line-height: 1;
 
   letter-spacing: 14px;
+
+  opacity: 0;
+
+  animation:
+    heroElementReveal 0.9s ease forwards;
+
+  animation-delay:
+    0.7s;
 }
+
+
+/* ==================================================
+   HERO DESCRIPTION
+================================================== */
 
 .hero-content p {
   max-width: 450px;
@@ -250,12 +345,42 @@ a {
   margin:
     0 auto 35px;
 
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: 18px;
 
   line-height: 1.65;
 
   color:
     rgba(23, 19, 24, 0.75);
+
+  opacity: 0;
+
+  animation:
+    heroElementReveal 0.8s ease forwards;
+
+  animation-delay:
+    0.85s;
+}
+
+
+/* ==================================================
+   HERO ELEMENT ANIMATION
+================================================== */
+
+@keyframes heroElementReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -271,9 +396,37 @@ a {
   gap: 12px;
 
   flex-wrap: wrap;
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  animation:
+    heroButtonsReveal 0.8s ease forwards;
+
+  animation-delay:
+    1s;
+}
+
+
+/* ==================================================
+   HERO BUTTON ANIMATION
+================================================== */
+
+@keyframes heroButtonsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .category-button {
+  position: relative;
+
   min-height: 52px;
 
   padding:
@@ -295,34 +448,119 @@ a {
   font-size: 13px;
   font-weight: 700;
 
+  overflow: hidden;
+
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
 }
+
+
+/* ==================================================
+   BUTTON LIGHT SHINE
+================================================== */
+
+.category-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.45),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  transition:
+    left 0.65s ease;
+}
+
+.category-button:hover::before {
+  left: 140%;
+}
+
+
+/* ==================================================
+   WOMEN BUTTON
+================================================== */
 
 .women-button {
   background:
-    rgba(255, 255, 255, 0.90);
+    var(--women-button);
 
   color:
     var(--black);
+
+  box-shadow:
+    0 10px 25px
+    rgba(242, 196, 206, 0.28);
 }
+
+.women-button:hover {
+  background:
+    #f6d2da;
+
+  transform:
+    translateY(-5px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 38px
+    rgba(180, 117, 130, 0.25);
+}
+
+
+/* ==================================================
+   MEN BUTTON
+================================================== */
 
 .men-button {
   background:
-    var(--black);
+    var(--men-button);
 
   color:
     var(--white);
-}
-
-.category-button:hover {
-  transform:
-    translateY(-4px);
 
   box-shadow:
-    0 15px 35px
-    rgba(30, 20, 30, 0.18);
+    0 10px 25px
+    rgba(79, 70, 84, 0.22);
+}
+
+.men-button:hover {
+  background:
+    #625665;
+
+  transform:
+    translateY(-5px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 38px
+    rgba(30, 20, 30, 0.28);
+}
+
+
+/* ==================================================
+   BUTTON ACTIVE
+================================================== */
+
+.category-button:active {
+  transform:
+    translateY(-1px)
+    scale(0.98);
 }
 
 
