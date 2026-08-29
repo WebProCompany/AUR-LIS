@@ -3,6 +3,7 @@
    PREMIUM PERFUME WEBSITE
 ================================================== */
 
+
 /* ==================================================
    VARIABLES
 ================================================== */
@@ -159,7 +160,8 @@ button {
 
 
 /* ==================================================
-   MOBILE MENU — HIDDEN ON DESKTOP
+   MOBILE MENU
+   HIDDEN ON DESKTOP
 ================================================== */
 
 .mobile-menu-button,
@@ -198,6 +200,7 @@ button {
   inset: 0;
 
   width: 100%;
+
   height: 100%;
 
   z-index: 1;
@@ -209,7 +212,16 @@ button {
   opacity: 0;
 
   animation:
-    heroImageReveal 1.4s ease forwards;
+    heroImageReveal
+    1.4s ease
+    forwards;
+}
+
+.hero-image picture {
+  display: block;
+
+  width: 100%;
+  height: 100%;
 }
 
 .hero-image img {
@@ -282,11 +294,16 @@ button {
     translateY(28px);
 
   animation:
-    heroContentReveal 1s ease forwards;
-
-  animation-delay:
-    0.35s;
+    heroContentReveal
+    1s ease
+    0.35s
+    forwards;
 }
+
+
+/* ==================================================
+   HERO CONTENT ANIMATION
+================================================== */
 
 @keyframes heroContentReveal {
 
@@ -332,10 +349,10 @@ button {
   opacity: 0;
 
   animation:
-    heroElementReveal 0.8s ease forwards;
-
-  animation-delay:
-    0.55s;
+    heroElementReveal
+    0.8s ease
+    0.55s
+    forwards;
 }
 
 
@@ -363,10 +380,10 @@ button {
   opacity: 0;
 
   animation:
-    heroElementReveal 0.9s ease forwards;
-
-  animation-delay:
-    0.7s;
+    heroElementReveal
+    0.9s ease
+    0.70s
+    forwards;
 }
 
 
@@ -395,10 +412,10 @@ button {
   opacity: 0;
 
   animation:
-    heroElementReveal 0.8s ease forwards;
-
-  animation-delay:
-    0.85s;
+    heroElementReveal
+    0.8s ease
+    0.85s
+    forwards;
 }
 
 
@@ -443,10 +460,10 @@ button {
     translateY(18px);
 
   animation:
-    heroButtonsReveal 0.8s ease forwards;
-
-  animation-delay:
-    1s;
+    heroButtonsReveal
+    0.8s ease
+    1s
+    forwards;
 }
 
 @keyframes heroButtonsReveal {
@@ -466,6 +483,11 @@ button {
   }
 }
 
+
+/* ==================================================
+   CATEGORY BUTTON
+================================================== */
+
 .category-button {
   position: relative;
 
@@ -484,15 +506,20 @@ button {
     1px solid
     rgba(23, 19, 24, 0.10);
 
-  border-radius: 50px;
+  border-radius:
+    50px;
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
-  font-size: 13px;
+  font-size:
+    13px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   transition:
     transform 0.35s ease,
@@ -507,9 +534,11 @@ button {
   position: absolute;
 
   top: 0;
+
   left: -120%;
 
   width: 80%;
+
   height: 100%;
 
   background:
@@ -528,8 +557,14 @@ button {
 }
 
 .category-button:hover::before {
-  left: 140%;
+  left:
+    140%;
 }
+
+
+/* ==================================================
+   WOMEN BUTTON
+================================================== */
 
 .women-button {
   background:
@@ -555,6 +590,11 @@ button {
     0 18px 38px
     rgba(180, 117, 130, 0.25);
 }
+
+
+/* ==================================================
+   MEN BUTTON
+================================================== */
 
 .men-button {
   background:
@@ -613,31 +653,39 @@ button {
 ================================================== */
 
 .section-heading {
-  max-width: 650px;
+  max-width:
+    650px;
 
   margin:
     0 auto 45px;
 
-  text-align: center;
+  text-align:
+    center;
 }
 
 .section-heading > span {
-  display: block;
+  display:
+    block;
 
-  margin-bottom: 12px;
+  margin-bottom:
+    12px;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    4px;
 
   color:
     var(--rose);
 }
 
 .section-heading h2 {
-  margin-bottom: 14px;
+  margin-bottom:
+    14px;
 
   font-size:
     clamp(32px, 5vw, 50px);
@@ -647,7 +695,8 @@ button {
   color:
     var(--muted);
 
-  line-height: 1.6;
+  line-height:
+    1.6;
 }
 
 
@@ -662,7 +711,8 @@ button {
   margin:
     0 auto;
 
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     repeat(4, 1fr);
@@ -677,9 +727,11 @@ button {
 ================================================== */
 
 .product-card {
-  position: relative;
+  position:
+    relative;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   background:
     rgba(255, 255, 255, 0.92);
@@ -695,7 +747,8 @@ button {
     0 12px 35px
     rgba(50, 30, 50, 0.06);
 
-  opacity: 0;
+  opacity:
+    0;
 
   transform:
     translateY(50px);
@@ -709,7 +762,8 @@ button {
 }
 
 .product-card.show {
-  opacity: 1;
+  opacity:
+    1;
 
   transform:
     translateY(0);
@@ -733,51 +787,63 @@ button {
 ================================================== */
 
 .product-card:nth-child(1) {
-  transition-delay: 0.05s;
+  transition-delay:
+    0.05s;
 }
 
 .product-card:nth-child(2) {
-  transition-delay: 0.10s;
+  transition-delay:
+    0.10s;
 }
 
 .product-card:nth-child(3) {
-  transition-delay: 0.15s;
+  transition-delay:
+    0.15s;
 }
 
 .product-card:nth-child(4) {
-  transition-delay: 0.20s;
+  transition-delay:
+    0.20s;
 }
 
 .product-card:nth-child(5) {
-  transition-delay: 0.25s;
+  transition-delay:
+    0.25s;
 }
 
 .product-card:nth-child(6) {
-  transition-delay: 0.30s;
+  transition-delay:
+    0.30s;
 }
 
 .product-card:nth-child(7) {
-  transition-delay: 0.35s;
+  transition-delay:
+    0.35s;
 }
 
 .product-card:nth-child(8) {
-  transition-delay: 0.40s;
+  transition-delay:
+    0.40s;
 }
 
 .product-card:nth-child(9) {
-  transition-delay: 0.45s;
+  transition-delay:
+    0.45s;
 }
 
 .product-card:nth-child(10) {
-  transition-delay: 0.50s;
+  transition-delay:
+    0.50s;
 }
 
 .product-card:nth-child(11) {
-  transition-delay: 0.55s;
+  transition-delay:
+    0.55s;
 }
 
 .product-card:nth-child(12) {
-  transition-delay: 0.60s;
+  transition-delay:
+    0.60s;
 }
 
 
@@ -786,14 +852,17 @@ button {
 ================================================== */
 
 .product-image {
-  position: relative;
+  position:
+    relative;
 
-  width: 100%;
+  width:
+    100%;
 
   aspect-ratio:
     3 / 4;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   background:
     linear-gradient(
@@ -804,11 +873,14 @@ button {
 }
 
 .product-image::after {
-  content: "";
+  content:
+    "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  inset: 0;
+  inset:
+    0;
 
   background:
     linear-gradient(
@@ -817,32 +889,42 @@ button {
       rgba(30, 20, 30, 0.08)
     );
 
-  opacity: 0;
+  opacity:
+    0;
 
-  pointer-events: none;
+  pointer-events:
+    none;
 
   transition:
     opacity 0.45s ease;
 }
 
-.product-card:hover .product-image::after {
-  opacity: 1;
+.product-card:hover
+.product-image::after {
+  opacity:
+    1;
 }
 
 .product-image img {
-  display: block;
+  display:
+    block;
 
-  width: 100%;
-  height: 100%;
+  width:
+    100%;
 
-  object-fit: cover;
+  height:
+    100%;
+
+  object-fit:
+    cover;
 
   transition:
     transform 0.7s
-      cubic-bezier(0.22, 1, 0.36, 1);
+    cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.product-card:hover .product-image img {
+.product-card:hover
+.product-image img {
   transform:
     scale(1.07);
 }
@@ -858,7 +940,8 @@ button {
 }
 
 .product-name {
-  margin-bottom: 9px;
+  margin-bottom:
+    9px;
 
   font-family:
     Georgia,
@@ -901,13 +984,17 @@ button {
 ================================================== */
 
 .product-bottom {
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
-  gap: 12px;
+  gap:
+    12px;
 }
 
 .product-price {
@@ -930,11 +1017,14 @@ button {
 ================================================== */
 
 .order-btn {
-  position: relative;
+  position:
+    relative;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
-  border: none;
+  border:
+    none;
 
   min-height:
     40px;
@@ -967,15 +1057,23 @@ button {
 }
 
 .order-btn::before {
-  content: "";
+  content:
+    "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  top: 0;
-  left: -120%;
+  top:
+    0;
 
-  width: 80%;
-  height: 100%;
+  left:
+    -120%;
+
+  width:
+    80%;
+
+  height:
+    100%;
 
   background:
     linear-gradient(
@@ -993,7 +1091,8 @@ button {
 }
 
 .order-btn:hover::before {
-  left: 140%;
+  left:
+    140%;
 }
 
 .order-btn:hover {
@@ -1020,14 +1119,17 @@ button {
 ================================================== */
 
 .contacts {
-  position: relative;
+  position:
+    relative;
 
-  overflow: hidden;
+  overflow:
+    hidden;
 
   padding:
     110px 5%;
 
-  text-align: center;
+  text-align:
+    center;
 
   background:
     linear-gradient(
@@ -1064,14 +1166,16 @@ button {
 @keyframes contactsReveal {
 
   from {
-    opacity: 0;
+    opacity:
+      0;
 
     transform:
       translateY(45px);
   }
 
   to {
-    opacity: 1;
+    opacity:
+      1;
 
     transform:
       translateY(0);
@@ -1079,7 +1183,8 @@ button {
 }
 
 .contacts-label {
-  display: inline-block;
+  display:
+    inline-block;
 
   margin-bottom:
     16px;
@@ -1221,7 +1326,8 @@ button {
 }
 
 .contact-button {
-  position: relative;
+  position:
+    relative;
 
   min-width:
     175px;
@@ -1572,7 +1678,8 @@ button {
     translateY(20px);
 }
 
-.address.address-visible h2 {
+.address.address-visible
+h2 {
   animation:
     addressTextReveal
     0.9s ease
@@ -1917,7 +2024,7 @@ button {
 
 
 /* ==================================================
-   FOOTER SOCIAL TOGGLE
+   FOOTER SOCIAL
 ================================================== */
 
 .footer-social {
@@ -2020,6 +2127,11 @@ button {
     rgba(50, 30, 50, 0.12);
 }
 
+
+/* ==================================================
+   FOOTER BOTTOM
+================================================== */
+
 .footer-bottom {
   width:
     min(900px, 100%);
@@ -2086,6 +2198,7 @@ button {
 ================================================== */
 
 @media (max-width: 700px) {
+
 
   /* ==================================================
      MOBILE HEADER
@@ -2316,103 +2429,147 @@ button {
       rgba(242, 196, 206, 0.55);
   }
 
-/* ==================================================
-   MOBILE HERO — FULLSCREEN IMAGE + GLASS CONTENT
-================================================== */
 
-@media (max-width: 700px) {
+  /* ==================================================
+     MOBILE HERO
+  ================================================== */
 
   .hero {
-    position: relative;
+    position:
+      relative;
 
-    min-height: 900px;
+    min-height:
+      900px;
 
-    padding: 0;
+    padding:
+      0;
 
-    display: flex;
+    display:
+      flex;
 
-    align-items: center;
-    justify-content: center;
+    align-items:
+      center;
 
-    overflow: hidden;
+    justify-content:
+      center;
 
-    background: #d9d9dc;
+    overflow:
+      hidden;
+
+    background:
+      #d9d9dc;
   }
 
 
   /* ==================================================
-     HERO IMAGE
+     MOBILE HERO IMAGE
   ================================================== */
 
- .hero-image {
-  position: absolute;
+  .hero-image {
+    position:
+      absolute;
 
-  inset: 0;
+    inset:
+      0;
 
-  width: 100%;
-  height: 100%;
+    width:
+      100%;
 
-  z-index: 1;
+    height:
+      100%;
 
-  opacity: 1;
+    z-index:
+      1;
 
-  overflow: hidden;
+    opacity:
+      1;
 
-  animation:
-    heroMobileImageReveal
-    1.2s ease forwards;
-}
-   
+    overflow:
+      hidden;
+
+    animation:
+      heroMobileImageReveal
+      1.2s ease
+      forwards;
+  }
+
+  .hero-image picture {
+    display:
+      block;
+
+    width:
+      100%;
+
+    height:
+      100%;
+  }
+
   .hero-image::after {
-    content: "";
+    content:
+      "";
 
-    position: absolute;
+    position:
+      absolute;
 
-    inset: 0;
+    inset:
+      0;
+
+    z-index:
+      2;
 
     background:
       linear-gradient(
         180deg,
-        rgba(45, 42, 48, 0.10) 0%,
-        rgba(45, 42, 48, 0.20) 48%,
+        rgba(45, 42, 48, 0.08) 0%,
+        rgba(45, 42, 48, 0.18) 45%,
         rgba(45, 42, 48, 0.42) 100%
       );
 
-    z-index: 2;
-
-    pointer-events: none;
+    pointer-events:
+      none;
   }
-.hero-image img {
-  width: 100%;
-  height: 100%;
 
-  max-width: none;
+  .hero-image img {
+    width:
+      100%;
 
-  object-fit: cover;
+    height:
+      100%;
 
-  object-position: center 45%;
+    max-width:
+      none;
 
-  transform:
-    scale(1.12);
+    object-fit:
+      cover;
 
-  filter: none;
-}
+    object-position:
+      center center;
+
+    transform:
+      scale(1.12);
+
+    filter:
+      none;
+  }
+
 
   /* ==================================================
-     HERO IMAGE ANIMATION
+     MOBILE HERO IMAGE ANIMATION
   ================================================== */
 
   @keyframes heroMobileImageReveal {
 
     from {
-      opacity: 0;
+      opacity:
+        0;
 
       transform:
         scale(1.035);
     }
 
     to {
-      opacity: 1;
+      opacity:
+        1;
 
       transform:
         scale(1);
@@ -2421,26 +2578,33 @@ button {
 
 
   /* ==================================================
-     HERO CONTENT
+     MOBILE HERO CONTENT
   ================================================== */
 
   .hero-content {
-    position: relative;
+    position:
+      relative;
 
-    z-index: 10;
+    z-index:
+      10;
 
-    width: calc(100% - 32px);
+    width:
+      calc(100% - 32px);
 
-    max-width: 390px;
+    max-width:
+      390px;
 
-    margin: 0;
+    margin:
+      0;
 
     padding:
       30px 20px 28px;
 
-    text-align: center;
+    text-align:
+      center;
 
-    opacity: 0;
+    opacity:
+      0;
 
     transform:
       translateY(24px);
@@ -2472,22 +2636,19 @@ button {
       rgba(20, 18, 24, 0.15);
   }
 
-
-  /* ==================================================
-     CONTENT ANIMATION
-  ================================================== */
-
   @keyframes heroMobileContentReveal {
 
     from {
-      opacity: 0;
+      opacity:
+        0;
 
       transform:
         translateY(24px);
     }
 
     to {
-      opacity: 1;
+      opacity:
+        1;
 
       transform:
         translateY(0);
@@ -2496,7 +2657,7 @@ button {
 
 
   /* ==================================================
-     HERO LABEL
+     MOBILE HERO LABEL
   ================================================== */
 
   .hero-label {
@@ -2533,7 +2694,7 @@ button {
 
 
   /* ==================================================
-     HERO TITLE
+     MOBILE HERO TITLE
   ================================================== */
 
   .hero-content h1 {
@@ -2579,7 +2740,7 @@ button {
 
 
   /* ==================================================
-     HERO DESCRIPTION
+     MOBILE HERO DESCRIPTION
   ================================================== */
 
   .hero-content p {
@@ -2648,7 +2809,7 @@ button {
 
 
   /* ==================================================
-     HERO ACTIONS
+     MOBILE HERO ACTIONS
   ================================================== */
 
   .hero-actions {
@@ -2682,7 +2843,7 @@ button {
 
 
   /* ==================================================
-     CATEGORY BUTTONS
+     MOBILE CATEGORY BUTTONS
   ================================================== */
 
   .category-button {
@@ -2790,52 +2951,7 @@ button {
 
 
   /* ==================================================
-     SMALL PHONES
-  ================================================== */
-
-  @media (max-width: 380px) {
-
-    .hero {
-      min-height:
-        680px;
-    }
-
-    .hero-content {
-      width:
-        calc(100% - 24px);
-
-      padding:
-        26px 15px 24px;
-
-      border-radius:
-        24px;
-    }
-
-    .hero-content h1 {
-      font-size:
-        42px;
-
-      letter-spacing:
-        6px;
-    }
-
-    .hero-content p {
-      font-size:
-        13px;
-    }
-
-    .category-button {
-      min-height:
-        46px;
-
-      font-size:
-        11px;
-    }
-  }
-}
- 
-  /* ==================================================
-     CATALOG
+     MOBILE CATALOG
   ================================================== */
 
   .catalog {
@@ -2860,7 +2976,7 @@ button {
 
 
   /* ==================================================
-     PRODUCTS
+     MOBILE PRODUCTS
   ================================================== */
 
   .products-grid {
@@ -2874,6 +2990,14 @@ button {
   .product-card {
     border-radius:
       11px;
+
+    transform:
+      translateY(35px);
+  }
+
+  .product-card.show {
+    transform:
+      translateY(0);
   }
 
   .product-info {
@@ -2944,7 +3068,7 @@ button {
 
 
   /* ==================================================
-     CONTACTS
+     MOBILE CONTACTS
   ================================================== */
 
   .contacts {
@@ -2992,7 +3116,7 @@ button {
 
 
   /* ==================================================
-     ADDRESS
+     MOBILE ADDRESS
   ================================================== */
 
   .address {
@@ -3036,7 +3160,7 @@ button {
 
 
   /* ==================================================
-     FOOTER
+     MOBILE FOOTER
   ================================================== */
 
   .footer {
@@ -3096,29 +3220,41 @@ button {
 
 @media (max-width: 380px) {
 
-  .hero-image {
-    height:
-      360px;
+  .hero {
+    min-height:
+      820px;
   }
 
   .hero-content {
+    width:
+      calc(100% - 24px);
+
     padding:
-      42px 15px 48px;
+      26px 15px 24px;
+
+    border-radius:
+      24px;
   }
 
   .hero-content h1 {
     font-size:
       42px;
+
+    letter-spacing:
+      6px;
   }
 
-  .product-name {
+  .hero-content p {
+    font-size:
+      13px;
+  }
+
+  .category-button {
+    min-height:
+      46px;
+
     font-size:
       11px;
-  }
-
-  .product-price {
-    font-size:
-      12px;
   }
 }
 
@@ -3152,11 +3288,7 @@ button {
       none;
   }
 
-  .product-card {
-    transition:
-      none;
-  }
-
+  .product-card,
   .contact-button,
   .footer-cta-button,
   .footer-social-link {
