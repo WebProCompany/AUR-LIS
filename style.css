@@ -3277,3 +3277,34 @@ h2 {
       none;
   }
 }
+
+/* ==================================================
+   MOBILE HERO — FINAL POSITIONING
+================================================== */
+
+@media (max-width: 700px) {
+
+  /* COLLECTION 2026 */
+  .hero-label {
+    transform: translateY(-85px);
+  }
+
+
+  /* AURÉLIS */
+  .hero-content h1 {
+    transform: translateY(-70px);
+  }
+
+
+  /* DESCRIPTION */
+  .hero-content p {
+    transform: translateY(35px);
+  }
+
+
+  /* BUTTONS */
+  .hero-actions {
+    transform: translateY(55px);
+  }
+
+}
