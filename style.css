@@ -1357,28 +1357,33 @@ footer strong {
 
   .product-price {
 
-   /* ==================================================
-   PRODUCT CARDS — SCROLL REVEAL
+/* ==================================================
+   PRODUCT CARDS — SCROLL ANIMATION
 ================================================== */
 
 .product-card {
   opacity: 0;
-  transform: translateY(45px);
+
+  transform:
+    translateY(50px);
+
   transition:
-    opacity 0.7s ease,
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s ease,
-    border-color 0.45s ease;
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .product-card.show {
   opacity: 1;
-  transform: translateY(0);
+
+  transform:
+    translateY(0);
 }
 
 
 /* ==================================================
-   STAGGER ANIMATION
+   CARD DELAY
 ================================================== */
 
 .product-card:nth-child(1) {
@@ -1386,62 +1391,63 @@ footer strong {
 }
 
 .product-card:nth-child(2) {
-  transition-delay: 0.12s;
+  transition-delay: 0.10s;
 }
 
 .product-card:nth-child(3) {
-  transition-delay: 0.19s;
+  transition-delay: 0.15s;
 }
 
 .product-card:nth-child(4) {
-  transition-delay: 0.26s;
+  transition-delay: 0.20s;
 }
 
 .product-card:nth-child(5) {
-  transition-delay: 0.33s;
+  transition-delay: 0.25s;
 }
 
 .product-card:nth-child(6) {
-  transition-delay: 0.40s;
+  transition-delay: 0.30s;
 }
 
 .product-card:nth-child(7) {
-  transition-delay: 0.47s;
+  transition-delay: 0.35s;
 }
 
 .product-card:nth-child(8) {
-  transition-delay: 0.54s;
+  transition-delay: 0.40s;
 }
 
 .product-card:nth-child(9) {
-  transition-delay: 0.61s;
+  transition-delay: 0.45s;
 }
 
 .product-card:nth-child(10) {
-  transition-delay: 0.68s;
+  transition-delay: 0.50s;
 }
 
 .product-card:nth-child(11) {
-  transition-delay: 0.75s;
+  transition-delay: 0.55s;
 }
 
 .product-card:nth-child(12) {
-  transition-delay: 0.82s;
+  transition-delay: 0.60s;
 }
 
 
 /* ==================================================
-   ACCESSIBILITY
+   MOBILE
 ================================================== */
 
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 700px) {
+
   .product-card {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    transform:
+      translateY(35px);
+  }
+
+  .product-card.show {
+    transform:
+      translateY(0);
   }
 }
-    font-size: 12px;
-  }
-}
-```
