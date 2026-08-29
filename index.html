@@ -16,26 +16,75 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+```html
+<!-- =========================
+     HEADER
+========================== -->
 
-  <header class="header">
+<header class="header">
 
-    <a href="#home" class="logo">
-      AURÉLIS
+  <a href="#home" class="logo">
+    AURÉLIS
+  </a>
+
+
+  <!-- DESKTOP NAVIGATION -->
+
+  <nav class="navigation">
+    <a href="#home">Главная</a>
+    <a href="#women">Женские</a>
+    <a href="#men">Мужские</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#address">Наш адрес</a>
+  </nav>
+
+
+  <!-- MOBILE MENU BUTTON -->
+
+  <button
+    class="mobile-menu-button"
+    id="mobile-menu-button"
+    type="button"
+    aria-label="Открыть меню"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+
+  <!-- MOBILE NAVIGATION -->
+
+  <nav
+    class="mobile-navigation"
+    id="mobile-navigation"
+  >
+
+    <a href="#home">
+      Главная
     </a>
 
-    <nav class="navigation">
-      <a href="#home">Главная</a>
-      <a href="#women">Женские</a>
-      <a href="#men">Мужские</a>
-      <a href="#contacts">Контакты</a>
-      <a href="#address">Наш адрес</a>
-    </nav>
+    <a href="#women">
+      Женские ароматы
+    </a>
 
-  </header>
+    <a href="#men">
+      Мужские ароматы
+    </a>
 
+    <a href="#contacts">
+      Контакты
+    </a>
+
+    <a href="#address">
+      Наш адрес
+    </a>
+
+  </nav>
+
+</header>
+```
 
   <!-- =========================
        MAIN
