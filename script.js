@@ -261,36 +261,46 @@ function renderProducts() {
       "#men-products"
     );
 
-  if (!womenGrid || !menGrid) {
 
-    console.error(
-      "Не найдены контейнеры товаров."
-    );
+  /* =========================
+     WOMEN PRODUCTS
+  ========================== */
 
-    return;
+  if (womenGrid) {
+
+    womenProducts.forEach(product => {
+
+      womenGrid.appendChild(
+        createProductCard(
+          product,
+          "women"
+        )
+      );
+
+    });
+
   }
 
-  womenProducts.forEach(product => {
 
-    womenGrid.appendChild(
-      createProductCard(
-        product,
-        "women"
-      )
-    );
+  /* =========================
+     MEN PRODUCTS
+  ========================== */
 
-  });
+  if (menGrid) {
 
-  menProducts.forEach(product => {
+    menProducts.forEach(product => {
 
-    menGrid.appendChild(
-      createProductCard(
-        product,
-        "men"
-      )
-    );
+      menGrid.appendChild(
+        createProductCard(
+          product,
+          "men"
+        )
+      );
 
-  });
+    });
+
+  }
+
 }
 
 
