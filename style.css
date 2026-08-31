@@ -1056,47 +1056,34 @@ button {
     nowrap;
 }
 
-
 /* ==================================================
    ORDER BUTTON
 ================================================== */
 
 .order-btn {
-  position:
-    relative;
+  position: relative;
 
-  overflow:
-    hidden;
+  overflow: hidden;
 
-  border:
-    none;
+  border: none;
 
-  min-height:
-    40px;
+  min-height: 40px;
 
-  padding:
-    0 18px;
+  padding: 0 18px;
 
-  flex-shrink:
-    0;
+  flex-shrink: 0;
 
-  border-radius:
-    30px;
+  border-radius: 30px;
 
-  background:
-    var(--black);
+  background: var(--black);
 
-  color:
-    var(--white);
+  color: var(--white);
 
-  cursor:
-    pointer;
+  cursor: pointer;
 
-  font-size:
-    12px;
+  font-size: 12px;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
   transition:
     transform 0.3s ease,
@@ -1105,23 +1092,15 @@ button {
 }
 
 .order-btn::before {
-  content:
-    "";
+  content: "";
 
-  position:
-    absolute;
+  position: absolute;
 
-  top:
-    0;
+  top: 0;
+  left: -120%;
 
-  left:
-    -120%;
-
-  width:
-    80%;
-
-  height:
-    100%;
+  width: 80%;
+  height: 100%;
 
   background:
     linear-gradient(
@@ -1131,24 +1110,20 @@ button {
       transparent
     );
 
-  transform:
-    skewX(-20deg);
+  transform: skewX(-20deg);
 
   transition:
     left 0.6s ease;
 }
 
 .order-btn:hover::before {
-  left:
-    140%;
+  left: 140%;
 }
 
 .order-btn:hover {
-  background:
-    var(--rose);
+  background: var(--rose);
 
-  transform:
-    translateY(-3px);
+  transform: translateY(-3px);
 
   box-shadow:
     0 10px 22px
@@ -1163,112 +1138,9 @@ button {
 
 .order-btn:focus-visible {
   outline:
-    2px solid
-    var(--rose);
+    2px solid var(--rose);
 
-  outline-offset:
-    3px;
-}
-
-/* ==================================================
-   ORDER BUTTON
-================================================== */
-
-.order-btn {
-  position:
-    relative;
-
-  overflow:
-    hidden;
-
-  border:
-    none;
-
-  min-height:
-    40px;
-
-  padding:
-    0 17px;
-
-  border-radius:
-    30px;
-
-  background:
-    var(--black);
-
-  color:
-    var(--white);
-
-  cursor:
-    pointer;
-
-  font-size:
-    12px;
-
-  font-weight:
-    700;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.order-btn::before {
-  content:
-    "";
-
-  position:
-    absolute;
-
-  top:
-    0;
-
-  left:
-    -120%;
-
-  width:
-    80%;
-
-  height:
-    100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.25),
-      transparent
-    );
-
-  transform:
-    skewX(-20deg);
-
-  transition:
-    left 0.6s ease;
-}
-
-.order-btn:hover::before {
-  left:
-    140%;
-}
-
-.order-btn:hover {
-  background:
-    var(--rose);
-
-  transform:
-    translateY(-3px);
-
-  box-shadow:
-    0 10px 22px
-    rgba(184, 117, 130, 0.25);
-}
-
-.order-btn:active {
-  transform:
-    translateY(-1px)
-    scale(0.97);
+  outline-offset: 3px;
 }
 
 
