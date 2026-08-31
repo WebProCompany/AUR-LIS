@@ -2344,10 +2344,12 @@ h2 {
       54%;
   }
 
-  .products-grid {
-    grid-template-columns:
-      repeat(3, 1fr);
-  }
+ .products-grid {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    18px;
 }
 
 
