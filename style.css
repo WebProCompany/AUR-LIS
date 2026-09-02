@@ -490,10 +490,9 @@ button {
 .category-button {
   position: relative;
 
-  min-height: 52px;
+  min-height: 50px;
 
-  padding:
-    0 27px;
+  padding: 0 25px;
 
   display: inline-flex;
 
@@ -503,22 +502,19 @@ button {
 
   border:
     1px solid
-    rgba(23, 19, 24, 0.10);
+    rgba(23, 19, 24, 0.12);
 
-  border-radius:
-    50px;
+  border-radius: 50px;
 
-  cursor:
-    pointer;
+  cursor: pointer;
 
-  font-size:
-    13px;
+  font-size: 12px;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  overflow:
-    hidden;
+  letter-spacing: 0.2px;
+
+  overflow: hidden;
 
   transition:
     transform 0.35s ease,
@@ -526,40 +522,6 @@ button {
     background 0.35s ease,
     color 0.35s ease;
 }
-
-.category-button::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: -120%;
-
-  width: 80%;
-
-  height: 100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.45),
-      transparent
-    );
-
-  transform:
-    skewX(-20deg);
-
-  transition:
-    left 0.65s ease;
-}
-
-.category-button:hover::before {
-  left:
-    140%;
-}
-
 
 /* ==================================================
    WOMEN BUTTON
