@@ -328,18 +328,18 @@ button {
 .hero-label {
   display: inline-block;
 
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 600;
 
-  letter-spacing: 4px;
+  letter-spacing: 4.5px;
 
   color:
     rgba(23, 19, 24, 0.65);
