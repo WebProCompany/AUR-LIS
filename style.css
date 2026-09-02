@@ -2494,7 +2494,7 @@ h2 {
   object-fit:
     cover;
 
-  object-position: 60%;
+  object-position: center 60%;
 
   transform:
     scale(1.10);
