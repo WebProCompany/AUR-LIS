@@ -2477,85 +2477,33 @@ h2 {
   }
 
 
-  /* ==================================================
-     MOBILE HERO IMAGE
-  ================================================== */
+/* ==================================================
+   MOBILE HERO IMAGE
+================================================== */
 
-  .hero-image {
-    position:
-      absolute;
+.hero-image img {
+  width:
+    100%;
 
-    inset:
-      0;
+  height:
+    100%;
 
-    width:
-      100%;
+  max-width:
+    none;
 
-    height:
-      100%;
+  object-fit:
+    cover;
 
-    z-index:
-      1;
+  object-position:
+    center center;
 
-    opacity:
-      1;
+  transform:
+    scale(1.10);
 
-    overflow:
-      hidden;
-
-    animation:
-      heroMobileImageReveal
-      1.2s ease
-      forwards;
-  }
-
-  .hero-image picture {
-    display:
-      block;
-
-    width:
-      100%;
-
-    height:
-      100%;
-  }
-
-  .hero-image::after {
-    content:
-      "";
-
-    position:
-      absolute;
-
-    inset:
-      0;
-
-    z-index:
-      2;
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(45, 42, 48, 0.08) 0%,
-        rgba(45, 42, 48, 0.18) 45%,
-        rgba(45, 42, 48, 0.42) 100%
-      );
-
-    pointer-events:
-      none;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-    object-position: center 50%;
-    transform: scale(1.18);
-    filter: none;
-  }
-
-
+  filter:
+    none;
+}
+   
   /* ==================================================
      MOBILE HERO IMAGE ANIMATION
   ================================================== */
