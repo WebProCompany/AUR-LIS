@@ -3344,3 +3344,23 @@ h2 {
       none;
   }
 }
+
+   .hero-description {
+  margin: 24px 0 18px;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.hero-features span {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
