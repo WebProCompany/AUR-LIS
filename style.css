@@ -2155,37 +2155,60 @@ h2 {
 @media (max-width: 1050px) {
 
   .navigation {
-    gap:
-      16px;
+    gap: 16px;
   }
 
   .navigation a {
-    font-size:
-      11px;
+    font-size: 11px;
   }
 
   .hero {
-    min-height:
-      700px;
+    min-height: 700px;
   }
 
   .hero-content {
-    width:
-      44%;
+    width: min(480px, 43%);
 
-    margin-left:
-      54%;
+    margin-left: auto;
+
+    margin-right: 7%;
+
+    text-align: center;
   }
 
- .products-grid {
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  .hero-content h1 {
+    font-size:
+      clamp(54px, 7vw, 82px);
 
-  gap:
-    18px;
+    letter-spacing: 10px;
+  }
+
+  .hero-content p {
+    max-width: 360px;
+
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    gap: 9px;
+  }
+
+  .category-button {
+    min-height: 47px;
+
+    padding: 0 21px;
+
+    font-size: 11px;
+  }
+
+  .products-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
 }
-   }
-
 
 /* ==================================================
    MOBILE
