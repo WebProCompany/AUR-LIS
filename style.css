@@ -2623,29 +2623,6 @@ h2 {
   }
 }
 
-  /* ==================================================
-     MOBILE HERO CONTENT ANIMATION
-  ================================================== */
-
-  @keyframes heroMobileContentReveal {
-
-    from {
-      opacity:
-        0;
-
-      transform:
-        translateY(10px);
-    }
-
-    to {
-      opacity:
-        1;
-
-      transform:
-        translateY(-15px);
-    }
-  }
-
 
   /* ==================================================
      COLLECTION 2026
