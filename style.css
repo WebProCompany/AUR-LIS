@@ -2567,7 +2567,7 @@ h2 {
     center;
 
   background:
-    rgba(60, 56, 64, 0.24);
+    rgba(60, 56, 64, 0.16);
 
   border:
     1px solid
@@ -2577,14 +2577,14 @@ h2 {
     24px;
 
   backdrop-filter:
-    blur(14px);
+    blur(12px);
 
   -webkit-backdrop-filter:
-    blur(14px);
+    blur(12px);
 
   box-shadow:
-    0 18px 40px
-    rgba(20, 18, 24, 0.16);
+    0 14px 32px
+    rgba(20, 18, 24, 0.12);
 
   opacity:
     0;
