@@ -2580,81 +2580,100 @@ h2 {
   }
 
 
-  /* ==================================================
-     MOBILE HERO CONTENT
-  ================================================== */
+ /* ==================================================
+   MOBILE HERO CONTENT
+================================================== */
 
-  .hero-content {
-    position:
-      relative;
+.hero-content {
+  position:
+    relative;
 
-    z-index:
-      10;
+  z-index:
+    10;
 
-    display:
-      flex;
+  display:
+    flex;
 
-    flex-direction:
-      column;
+  flex-direction:
+    column;
 
-    align-items:
-      center;
+  align-items:
+    center;
 
-    justify-content:
-      center;
+  justify-content:
+    center;
 
-    width:
-      calc(100% - 28px);
+  width:
+    calc(100% - 28px);
 
-    max-width:
-      390px;
+  max-width:
+    390px;
 
-    margin:
-      0 auto;
+  margin:
+    0 auto;
 
-    /*
-      Ин қисми махсусан барои ҷойгиршавӣ аст.
-      Тамоми блок каме боло меояд.
-    */
-    padding:
-      22px 16px 26px;
+  padding:
+    22px 16px 26px;
 
-    text-align:
-      center;
+  text-align:
+    center;
 
-    background:
-      rgba(60, 56, 64, 0.24);
+  background:
+    rgba(60, 56, 64, 0.24);
 
-    border:
-      1px solid
-      rgba(255, 255, 255, 0.22);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.22);
 
-    border-radius:
-      24px;
+  border-radius:
+    24px;
 
-    backdrop-filter:
-      blur(14px);
+  backdrop-filter:
+    blur(14px);
 
-    -webkit-backdrop-filter:
-      blur(14px);
+  -webkit-backdrop-filter:
+    blur(14px);
 
-    box-shadow:
-      0 18px 40px
-      rgba(20, 18, 24, 0.16);
+  box-shadow:
+    0 18px 40px
+    rgba(20, 18, 24, 0.16);
 
+  opacity:
+    0;
+
+  transform:
+    translateY(-5px);
+
+  animation:
+    heroMobileContentReveal
+    0.9s ease
+    0.25s
+    forwards;
+}
+
+
+/* ==================================================
+   MOBILE HERO CONTENT ANIMATION
+================================================== */
+
+@keyframes heroMobileContentReveal {
+
+  from {
     opacity:
       0;
 
     transform:
-      translateY(-15px);
-
-    animation:
-      heroMobileContentReveal
-      0.9s ease
-      0.25s
-      forwards;
+      translateY(10px);
   }
 
+  to {
+    opacity:
+      1;
+
+    transform:
+      translateY(-5px);
+  }
+}
 
   /* ==================================================
      MOBILE HERO CONTENT ANIMATION
