@@ -489,9 +489,9 @@ button {
 .category-button {
   position: relative;
 
-  min-height: 50px;
+  min-height: 48px;
 
-  padding: 0 25px;
+  padding: 0 23px;
 
   display: inline-flex;
 
